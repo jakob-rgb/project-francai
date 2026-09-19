@@ -680,17 +680,31 @@ article i {
     border-radius: 24px;
     padding: 24px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .final aside img {
     display: block;
-    width: 190px;
-    height: 190px;
+    width: 220px;
+    height: 220px;
     margin: 18px auto;
+    padding: 10px;
+    border-radius: 20px;
+    background: #fff;
+    border: 1px solid rgba(80, 98, 127, 0.18);
+    box-shadow: 0 18px 40px rgba(80, 98, 127, 0.1);
+}
+
+.final aside h3 {
+    margin: 0;
 }
 
 .final aside p {
     color: var(--mut);
+    margin-bottom: 0;
 }
 
 
