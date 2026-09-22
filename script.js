@@ -29,74 +29,29 @@ nav.querySelectorAll("a").forEach(
 );
 
 
-// ==================== VIDÉO ====================
-
-document.getElementById("vid").onclick = () =>
-    window.open(
-        "https://www.youtube.com/results?search_query=organes+artificiels+medecine",
-        "_blank"
-    );
-
-
 // ==================== QUESTIONS / QUIZ ====================
 
 const qs = [
-
     [
         "Quel est l'objectif principal d'un organe artificiel?",
-        [
-            "Décorer le corps",
-            "Remplacer ou assister une fonction biologique",
-            "Changer la couleur du corps",
-            "Remplacer tous les médicaments"
-        ],
+        ["Décorer le corps", "Remplacer ou assister une fonction biologique", "Changer la couleur du corps"],
         1
     ],
-
     [
-        "Quelle technique fabrique couche par couche?",
-        [
-            "Impression 3D",
-            "Radiographie",
-            "Échographie",
-            "Dialyse"
-        ],
+        "Quelle technique fabrique des objets couche par couche?",
+        ["Impression 3D", "Radiographie", "Dialyse"],
         0
     ],
-
     [
-        "La dialyse remplace certaines fonctions de quel organe?",
-        [
-            "Cœur",
-            "Poumon",
-            "Rein",
-            "Cerveau"
-        ],
-        2
+        "La dialyse remplace principalement la fonction de quel organe?",
+        ["Poumon", "Rein", "Cœur"],
+        1
     ],
-
     [
-        "Quel élément peut provoquer une panne?",
-        [
-            "Un composant mécanique ou électronique",
-            "La couleur",
-            "La lumière uniquement",
-            "La taille uniquement"
-        ],
-        0
-    ],
-
-    [
-        "Pourquoi le coût peut-il être une limite?",
-        [
-            "La recherche et le suivi peuvent être coûteux",
-            "Tout est gratuit",
-            "Aucun matériel n'est nécessaire",
-            "Il n'y a pas de recherche"
-        ],
+        "Quel problème rend l'intégration d'un organe artificiel difficile?",
+        ["Réaction immunitaire (rejet)", "Manque de couleur", "Prix bas"],
         0
     ]
-
 ];
 
 let n = 0;
@@ -198,7 +153,7 @@ next.onclick = () => {
 
             <p>
                 ${
-                    s === 5
+                    s === qs.length
                         ? "Excellent !"
                         : s >= 3
                             ? "Bravo !"
@@ -217,3 +172,21 @@ next.onclick = () => {
 // ==================== LANCEMENT DU QUIZ ====================
 
 render();
+
+
+// ==================== RIGHT-CLICK NAVIGATION ====================
+// Right-click anywhere (no Ctrl/Meta) scrolls to the next main <section>
+document.addEventListener("contextmenu", (e) => {
+    if (e.ctrlKey || e.metaKey) return; // allow normal menu with modifier
+    e.preventDefault();
+
+    const sections = Array.from(document.querySelectorAll("main section"));
+    if (!sections.length) return;
+
+    const y = window.scrollY || window.pageYOffset;
+    // find next section whose top is below current scroll position + small offset
+    let next = sections.find(s => s.getBoundingClientRect().top + window.scrollY > y + 10);
+    if (!next) next = sections[0];
+
+    next.scrollIntoView({ behavior: "smooth", block: "start" });
+});
