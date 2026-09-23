@@ -94,9 +94,37 @@ header {
 
 /* ==================== LOGO ==================== */
 
+.brand-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+}
+
+.brand-logos {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+}
+
+.brand-logos img {
+    height: 70px;
+    width: auto;
+    max-width: 110px;
+    object-fit: contain;
+    display: block;
+    opacity: 1;
+    filter: none;
+}
+
 .logo {
     font-weight: 800;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
+    font-size: 12px;
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
 }
 
 .logo b {
