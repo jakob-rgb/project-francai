@@ -33,23 +33,48 @@ nav.querySelectorAll("a").forEach(
 
 const qs = [
     [
-        "Quel est l'objectif principal d'un organe artificiel?",
-        ["Décorer le corps", "Remplacer ou assister une fonction biologique", "Changer la couleur du corps"],
-        1
-    ],
-    [
-        "Quelle technique fabrique des objets couche par couche?",
-        ["Impression 3D", "Radiographie", "Dialyse"],
+        "Quel est l'un des principaux avantages des organes artificiels ?",
+        [
+            "Ils peuvent remplacer certaines fonctions d'un organe défaillant.",
+            "Ils guérissent toutes les maladies définitivement.",
+            "Ils rendent le système immunitaire inutile."
+        ],
         0
     ],
     [
-        "La dialyse remplace principalement la fonction de quel organe?",
-        ["Poumon", "Rein", "Cœur"],
+        "Pourquoi les biomatériaux sont-ils importants dans les organes artificiels ?",
+        [
+            "Ils doivent être compatibles avec le corps humain.",
+            "Ils doivent être facilement cassables.",
+            "Ils doivent empêcher complètement la circulation du sang."
+        ],
+        0
+    ],
+    [
+        "Quel problème peut limiter l'utilisation à long terme d'un organe artificiel ?",
+        [
+            "Le manque de couleur naturelle.",
+            "L'usure du dispositif ou une réaction du corps.",
+            "La différence de taille entre les patients."
+        ],
         1
     ],
     [
-        "Quel problème rend l'intégration d'un organe artificiel difficile?",
-        ["Réaction immunitaire (rejet)", "Manque de couleur", "Prix bas"],
+        "Comment une prothèse bionique peut-elle reproduire certains mouvements du bras ?",
+        [
+            "En utilisant des signaux musculaires pour contrôler des moteurs électroniques.",
+            "En faisant repousser automatiquement les os du bras.",
+            "En fonctionnant uniquement grâce à la chaleur du corps."
+        ],
+        0
+    ],
+    [
+        "Quel est le principal rôle d'un organe artificiel ?",
+        [
+            "Remplacer ou aider une fonction biologique défaillante.",
+            "Modifier l'apparence extérieure du corps.",
+            "Supprimer complètement le besoin d'une visite médicale."
+        ],
         0
     ]
 ];
